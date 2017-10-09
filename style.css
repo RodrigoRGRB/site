@@ -1,0 +1,622 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway';
+    color: white;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+
+
+.parallax {
+    background-image: url("rodrigo.png");
+    background-color: rgba(255,255,255,0.8);
+
+    /* Set a specific height */
+    min-height: 800px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Menu */
+#menu-content{
+    width: 100%;
+    margin:0 auto;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 1s;
+}
+
+.menu ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu a{
+    font-size: 1em;
+    font-weight: 100;
+    display: block;
+    padding: 20px;
+    text-transform: uppercase;
+}
+.menu a:hover{
+    color:#672a88;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+.logo{
+  width: 100px;
+  height: 75px;
+}
+
+
+/* Eu sou */
+main{
+    font-size:3em;
+    margin: 0 auto;
+    padding: 175px 0 0 0;
+    max-width: 1200px;
+    
+}
+
+.eu{
+    color: #f1c40f  ;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.botao-eu{
+    margin:20px 0 0 0;
+    padding: 20px;
+    font-size: 1rem;
+    border: 1px solid white;
+    max-width: 226px;
+    text-align: center;
+    border-radius: 6px;
+  transition: background 0.5s,color 0.5s;
+}
+
+.botao-eu:hover{
+    background: white;
+    color: black;
+}
+
+
+/* info */
+.info{
+    padding: 180px 0;
+    background: #672a88;
+    text-align: center;
+}
+.titulo, .info-texto{
+    font-size: 2em;
+    font-family:'Raleway';
+    font-weight: 300;
+    color: white;
+}
+.preto{
+    color: black;
+}
+.info-texto{
+    padding: 50px 0 0 0;
+    font-size:1.5em;
+    line-height: 1.4;
+}
+
+/* Porque eu amo */
+.euamo-content {
+	color: #ababab;
+  max-width: 1200px;
+  margin:60px auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 150px 0;
+}
+
+.euamo-item {
+	flex: 1 1 300px;
+  text-align: center;
+  margin: 0px 50px;
+  transition: color 1s;
+}
+
+.euamo-item h2{
+	font-size:1.40em;
+  margin: 40px 0 0 0;
+}
+
+.euamo-item p{
+  margin: 20px 0;
+	font-size: 1em;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.euamo-item i{
+	font-size: 3em;
+  padding: 21px 0 21px 0;
+}
+
+.euamo-item:hover {
+	color: #672a88;
+}
+
+.euamo-item i:hover{
+	border: 1px solid #672a88;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+/*Skills*/
+.skill-content {
+	background: #ebebeb;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.skill-content h2{
+	color: #42454b;
+  text-align: center;
+  padding: 50px 0 10px 0;
+}
+
+.skill-content p{
+	color: #7d7d7d;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.content-item{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12em;
+}
+
+.skill-item {
+	color: #42454b;
+  text-align: center;
+  flex: 1 1 300px;
+  margin: 10px 50px 138px 50px;
+  max-width: 300px;
+}
+
+.skill-item i:hover{
+	color: #672a88;
+}
+/* Menu Fixo*/
+.menuFixo {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background-color: rgba(0,0,0,0.8);
+}
+
+/*Curriculo*/
+
+.perfil-content{
+	max-width: 1200px;
+	margin:0 auto;
+	display: flex;
+	flex:1 1 500px;
+	justify-content: space-between;
+	padding:180px 0;
+}
+
+.perfil-item{
+	color: #333232;
+	max-width: 500px;
+	text-align: justify;
+}
+
+.perfil-item h2{
+	padding-bottom: 20px;
+	font-size: 2em;
+}
+.perfil-item p{
+	line-height: 1.4;
+}
+
+.perfil-item .botao-curriculo{
+	color:white;
+	background: #672a88;
+	display: flex;
+	justify-content: space-around;
+	border-radius: 16px;
+	padding: 20px;
+	margin: 20px 0;
+}
+
+.perfil-item i{
+	align-self: center;
+}
+
+.perfil-item li{
+	padding: 20px 0 0 0;
+}
+.table-content{
+	width: 400px;
+  flex: 1;
+  display: flex;
+  flex-wrap:wrap;
+  color:white;  
+  justify-content: space-between;
+  background: #672A88;
+}
+
+.table-content p{
+	padding: 10px;
+  
+}
+
+.table-content p:nth-child(2) {
+	background: black;
+}
+
+.trabalhos-content{
+  background: #414141;
+  padding: 150px 0;
+  text-align: center;
+}
+
+.trabalhos-content h2, .trabalhos-content p{
+	  font-size: 1.75em;
+    font-family:'Raleway';
+    font-weight: bold;
+}
+
+.trabalhos-content p{
+  font-size: 1em;
+  line-height: 1.4;
+  font-weight: 300;
+  padding: 10px 0;
+  color: #8d8d8d;
+}
+
+.trabalhos-content .trabalhos-menu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.trabalhos-menu ul{
+	display: flex;
+  flex-wrap:wrap;
+}
+
+.trabalhos-menu li{
+	 padding:0px 5px; 
+}
+
+.trabalhos-menu a{
+	font-size: 1.25em;
+  display: block;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.trabalhos-menu a:hover {
+  color: #672a88;
+  background: white;
+}
+
+.trabalhos-item{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/*Blog*/
+.blog-content{
+	max-width:1200px;
+	margin: 0 auto;
+}
+
+.blog-content .titulo{
+	color:#414141
+}
+
+.blog-content{
+	color:#a3a3a3;
+	text-align: center;
+	padding: 80px 0;
+}
+
+.content-item-blog{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.blog-item{
+	margin:0 auto;
+	flex: 1 1 360px;
+	padding: 30px;
+	text-align: left;
+	min-width: 360px;
+	max-width: 400px;
+}
+
+.blog-item h3, .blog-item span, .blog-item p{
+	padding:5px 0px;
+	max-width: 300px;
+}
+
+.blog-item p{
+	text-align: justify;
+}
+
+
+.blog-item-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.botao-blog{
+	background: #672a88;
+	color: white;
+	max-width: 150px;
+	text-align:center;
+	padding: 10px;
+	border: 1px solid #672a88;
+	transition: border-radius 0.2s, background 0.2s, color 0.2s;
+}
+
+.botao-blog:hover, .footer-blog:hover{
+	border-color: #672a88;
+	border-radius:15px;
+	background: white;
+	color: #672a88;
+}
+
+.footer-blog{
+	background: #672a88;
+	color: white;
+	padding: 20px 0;
+	margin-top: 100px;
+	border: 1px solid #672a88;
+	transition: border-radius 0.2s, background 0.2s, color 0.2s;
+	display: block;
+}
+
+/*Frases*/
+.frases{
+		background-image: url(frases.png);
+		background-color: black;
+    background-size: cover;
+    background-position: center;
+		background-repeat: no-repeat;
+		margin: 0 auto;
+}
+
+.frases h2{
+		text-align: center;
+		font-size:3em;
+		padding: 50px 0;
+}
+
+.frases p{
+		max-width: 750px;
+		text-align: center;
+		margin: 0 auto;
+  font-size:2em;
+}
+
+.autor{
+		max-width: 600px;
+		margin: 0 auto;
+		text-align: right;
+		font-size:.80em;
+		display: block;
+}
+
+.autor:after, .frases p:before{
+		content: "";
+		display: block;
+		height: 2px;
+		background: white;
+		margin: 40px auto;
+		width: 300px;
+		text-align: center;
+}
+
+.frase-content{
+		max-width: 450px;
+		display: flex;
+		flex-wrap:wrap;
+		justify-content: space-around;
+		margin: 0 auto;
+		padding: 70px 0 70px 0;
+		
+}
+
+.frases-item{
+		padding: 6px 40px;
+		background: rgba(255,255,255,0.7);
+}
+
+.frases-item:hover{
+		background:rgba(103,42,136,0.7); 
+}
+/*Contato*/
+.contato{
+		background: #672a88;
+		background: linear-gradient(-135deg, #672a88, #923cc1);
+		min-height: 400px;
+}
+
+.contato h2 , .contato h3{
+  text-align: center;
+  padding: 30px 0;
+  font-size: 2.250em;
+}
+
+.contato h3{
+  text-align: left;
+  max-width: 1060px;
+  margin: 0 auto;
+  display: block;
+}
+
+.contato .redes-content{
+  max-width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size:1.325em;
+  padding: 46px 0 76px 0;
+}
+
+.contato .redes-item i{
+	padding:0 9 0 0;
+}
+
+.contato span{
+  max-width: 1060px;
+  margin: 0 auto;
+  display: block;
+  font-size: 2.250em;
+}
+
+.contato-form{
+  margin: 0 auto;
+  max-width: 1060px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding:50 0 145px 0;
+}
+
+/*Resete Formulario*/
+input, label, select, button, textarea{
+  margin:0;
+	border:0;
+	padding:0;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+	background:none;
+	line-height:1;
+	
+	/* Browsers have different default form fonts */
+	font-size:13px;
+	font-family:Arial;
+}
+
+input:focus {
+	outline:0;
+}
+
+
+.contato input{
+		border-bottom: 3px solid rgba(255,255,255,0.4);
+		color: rgba(255,255,255,0.4);
+		font-size: 2.250em;
+    width: 380px;
+		padding: 20px 0px 5px 0;
+    transition: border 1s, color 1s;
+}
+
+.contato input:hover, .contato input:focus{
+  border-bottom: 3px solid white;
+  color:white;
+}
+
+.contato .mensagem{
+  width: 850px;
+}
+.contato .enviar{
+  width: 150px;
+}
+.contato input::placeholder{
+		color: rgba(255,255,255,0.4);
+		font-size:2.250rem;
+    transition:color 1s;
+}
+
+input:hover::-webkit-input-placeholder{color:white}
+/*Footer*/
+
+footer{
+		display: block;
+		background: #131413;
+		color: white;
+		padding: 40px 0;
+		text-align: center;
+}
+footer p{
+		text-transform: uppercase;
+		font-family: "bebas kai", sans-serif;
+		letter-spacing: 3;
+		font-size:1.25em;
+}
+/*teste*/
+
+/* O container geral define a perspectiva */  
+.flip-container { perspective: 1000; }  	
+
+/* vira os containers frente e verso quando o mouse passa em cima */
+.flip-container:hover .flipper, .flip-container.hover .flipper {  		
+  transform: rotateY(180deg);  	
+}    
+.flip-container, .front, .back {  	
+  width: 300px; 
+  height: 300px;
+}
+
+/* define a velocidade da transição */
+.flipper {  	
+  transition: 0.6s;  	
+  transform-style: preserve-3d;    	
+  position: relative;  
+}
+    
+/* esconde o verso durante a animação */
+.front, .back {  	
+  backface-visibility: hidden;    	
+  position: absolute;  	
+  top: 0;  	
+ left: 0;  
+}
+    
+/* frente posicionada sobre o verso */
+.front { z-index: 2;  }    
+
+/* verso inicialmente escondido */
+.back { 
+  transform: rotateY(180deg); 
+  font-size:2rem;
+}

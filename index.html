@@ -1,0 +1,402 @@
+<!doctype>
+<html>
+    <head>
+        <title>
+            Rodrigo Sistemas
+        </title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900" rel="stylesheet">
+      <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script type="text/javascript">
+            var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+            
+        </script>
+      
+      <script>
+        
+        $(function(){   
+          
+          var nav = $('#menu-content');   
+          $(window).scroll(function () { 
+            if ($(this).scrollTop() > 600) { 
+              nav.addClass("menuFixo"); 
+            } else { 
+              nav.removeClass("menuFixo"); 
+            } 
+          });  
+          
+        });
+      </script>
+    </head>
+    <body>
+        
+      
+      
+        <section class="parallax">
+            <div id="menu-content"> 
+                <img src="logo.png" alt="Rodrigo Sistemas" class="logo">
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sobre Mim</a></li>
+                        <li><a href="#">Skills</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <main>
+            Eu sou Rodrigo Gabriel<br>
+            e eu sou um 
+            
+              <a href="" class="typewrite eu" data-period="2000" data-type='["Amante da programação.", "amante da criatividade.", "amante de designer.", "amante de UX/" ]'>
+                <span class="wrap"></span>
+              </a> 
+            <p class="botao-eu">Esse sou eu</p>
+            </main>
+        </section>
+        
+        <section class="info">
+            <h2 class="titulo">Eu estou tão feliz com sua visita<span class="preto">_</span></h2>
+            <p class="info-texto">Eu criei esse site para que você possa me conhecer em um nivel<br>
+            pessoal. Minha facinação por compartilhar meu conhecimento, alguns<br>
+            trabalhosdivertidos, meu Blog, minhas citações favoritas e muito<br>
+            mais.</p>
+        </section>
+			
+		  <section class="euamo-content">
+		    
+        <div class="euamo-item">
+          <i class="fa fa-heart" aria-hidden="true"></i>
+          <h2>Porque eu amo Programar</h2>
+          <p>A programação me permiti construir coisas
+            para ajudar as pessoas ao redor do mundo, 
+            ela me deixa minha criatividade livre, o limite 
+            não existe dentro da programação</p>
+        </div>
+        
+        <div class="euamo-item">
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          <h2>Porque eu amo Ensinar</h2>
+          <p>Quando eu vejo o sorriso no rosto de uma 
+            que aprende algo que eu ensinei, não tem
+            gratida maior que essa. saber que você fez di
+            ferença na vida de alguém</p>
+        </div>
+        
+        <div class="euamo-item">
+          <i class="fa fa-gamepad" aria-hidden="true"></i>
+          <h2>Porque eu amo Jogar</h2>
+          <p>Quando começo a jogar, parece que eu
+          entro em uma outra dimensão, é um local 
+          onde minha felicidade nao tem limites, 
+          é impossivel descrever porque eu amo jogar!</p>
+        </div>
+        
+			</section>
+      
+      <section class="skill-content">
+        <h2>Minhas Habilidades<span class="preto">_</span></h2>
+        <p>Estas são as habilidades que eu mais estou orgulhoso</p>
+        
+        <div class="content-item">
+          <section class="skill-item">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">  	
+              <div class="flipper">  		
+                <div class="front">  			
+                  <i class="fa fa-cogs" aria-hidden="true"></i> 		
+                </div>  		
+                <div class="back">  			
+                  Programação		
+                </div>  	
+              </div>  
+            </div>
+            
+          </section>
+
+          <section class="skill-item">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">  	
+              <div class="flipper">  		
+                <div class="front">  			
+                  <i class="fa fa-desktop" aria-hidden="true"></i> 		
+                </div>  		
+                <div class="back">  			
+                  Designer 		
+                </div>  	
+              </div>  
+            </div>
+          </section>
+
+          <section class="skill-item">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">  	
+              <div class="flipper">  		
+                <div class="front">  			
+                  <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>		
+                </div>  		
+                <div class="back">  			
+                  User Interface		
+                </div>  	
+              </div>  
+            </div>
+          </section>
+
+          <section class="skill-item">            
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">  	
+              <div class="flipper">  		
+                <div class="front">  			
+                  <i class="fa fa-lightbulb-o" aria-hidden="true"></i>		
+                </div>  		
+                <div class="back">  			
+                  Criatividade		
+                </div>  	
+              </div>  
+            </div>
+          </section>
+
+          <section class="skill-item">            
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">  	
+              <div class="flipper">  		
+                <div class="front">  			
+                  <i class="fa fa-leanpub" aria-hidden="true"></i>		
+                </div>  		
+                <div class="back">  			
+                  Palestrar	
+                </div>  	
+              </div>  
+            </div>
+          </section>
+
+          <section class="skill-item">            
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">  	
+              <div class="flipper">  		
+                <div class="front">  			
+                  <i class="fa fa-fort-awesome" aria-hidden="true"></i> 		
+                </div>  		
+                <div class="back">  			
+                  Game Designer 		
+                </div>  	
+              </div>  
+            </div>
+          </section>
+        </div>
+      </section>
+      
+      <section class="perfil-content">
+        <section class="perfil-item">
+          <h2>Tecnicamente Falando...</h2>
+          <p>Meu interesse por design veio quando eu era adolesce
+          nte, quando na epoca começei a programar html e 
+          javascript no notepad, aprendi os fundamentos do desi
+          gn e não parei mais de estudar, Sou fascinado por 
+          BackEnd porem de dois anos para cá meu foco é UX e UI 
+          </p>
+          
+          <div class="botao-curriculo">
+            <i class="fa fa-download" aria-hidden="true"></i>
+            <p>Faça o download do meu curriculo</p>
+          </div>
+        </section>
+        
+        <section class="perfil-item">
+          <ul>
+							<li><div class="table-content"><P>HTML5/CSS3</P><p>9/10</p></div></li>
+							<li><div class="table-content"><P>JAVASCRIPT</P><p>9/10</p></div></li>
+							<li><div class="table-content"><P>PHP</P><p>9/10</p></div></li>
+							<li><div class="table-content"><P>Jquery</P><p>9/10</p></div></li>
+							<li><div class="table-content"><P>Photoshop</P><p>9/10</p></div></li>
+					</ul>
+        </section>
+      </section>
+      
+      <section class="trabalhos-content">
+        <h2>Meus Trabalhos</h2>
+        <p>o que eu fiz nos últimos anos</p>
+        
+        <div class="trabalhos-menu">
+          <ul>
+            <li><a href="#">Todos</a></li>
+            <li><a href="#">Games</a></li>
+            <li><a href="#">Code</a></li>
+            <li><a href="#">Design</a></li>
+          </ul>
+        </div>
+        
+        
+        <section class="trabalhos-item">
+          <img src="trabalho1.png" alt="trabalho 1">
+          <img src="trabalho2.png" alt="trabalho 2">
+          <img src="trabalho3.png" alt="trabalho 3">
+          <img src="trabalho1.png" alt="trabalho 1">
+          <img src="trabalho2.png" alt="trabalho 2">
+          <img src="trabalho3.png" alt="trabalho 3">
+        </section>
+        
+      </section>
+      
+			<section class="blog-content">
+				<h2 class="titulo">BLOG</h2>
+				<p>Sobre Design, Programação e Games</p>
+				
+				<div class="content-item-blog">
+					
+					<section class="blog-item">
+						<img src="blog.png">
+						<h3>Unreal 4 Chegando Com Tudo</h3>
+						<span class="blog-item-container"><p>1 ano atrás</p><p><i class="fa fa-clock-o" aria-hidden="true"></i> 6 Minutos</p></span>
+						<p>A programação me permiti construir 
+							coisas para ajudar as pessoas ao redor 
+							do mundo, ela me deixa minha.</p>
+						<div class="botao-blog">Leia Mais</div>
+					</section>	
+
+					<section class="blog-item">
+						<img src="blog.png">
+						<h3>Unreal 4 Chegando Com Tudo</h3>
+						<span class="blog-item-container"><p>1 ano atrás</p><p><i class="fa fa-clock-o" aria-hidden="true"></i> 6 Minutos</p></span>
+						<p>A programação me permiti construir 
+							coisas para ajudar as pessoas ao redor 
+							do mundo, ela me deixa minha.</p>
+						<div class="botao-blog">Leia Mais</div>
+					</section>
+
+					<section class="blog-item">
+						<img src="blog.png">
+						<h3>Unreal 4 Chegando Com Tudo</h3>
+						<span class="blog-item-container"><p>1 ano atrás</p><p><i class="fa fa-clock-o" aria-hidden="true"></i> 6 Minutos</p></span>
+						<p>A programação me permiti construir 
+							coisas para ajudar as pessoas ao redor 
+							do mundo, ela me deixa minha.</p>
+						<div class="botao-blog">Leia Mais</div>
+					</section>
+					
+					<section class="blog-item">
+						<img src="blog.png">
+						<h3>Unreal 4 Chegando Com Tudo</h3>
+						<span class="blog-item-container"><p>1 ano atrás</p><p><i class="fa fa-clock-o" aria-hidden="true"></i> 6 Minutos</p></span>
+						<p>A programação me permiti construir 
+							coisas para ajudar as pessoas ao redor 
+							do mundo, ela me deixa minha.</p>
+						<div class="botao-blog">Leia Mais</div>
+					</section>	
+
+					<section class="blog-item">
+						<img src="blog.png">
+						<h3>Unreal 4 Chegando Com Tudo</h3>
+						<span class="blog-item-container"><p>1 ano atrás</p><p><i class="fa fa-clock-o" aria-hidden="true"></i> 6 Minutos</p></span>
+						<p>A programação me permiti construir 
+							coisas para ajudar as pessoas ao redor 
+							do mundo, ela me deixa minha.</p>
+						<div class="botao-blog">Leia Mais</div>
+					</section>
+
+					<section class="blog-item">
+						<img src="blog.png">
+						<h3>Unreal 4 Chegando Com Tudo</h3>
+						<span class="blog-item-container"><p>1 ano atrás</p><p><i class="fa fa-clock-o" aria-hidden="true"></i> 6 Minutos</p></span>
+						<p>A programação me permiti construir 
+							coisas para ajudar as pessoas ao redor 
+							do mundo, ela me deixa minha.</p>
+						<div class="botao-blog">Leia Mais</div>
+					</section>
+				
+				</div>
+				<a href="#'" class="footer-blog">Todas as Postagens</a >
+			</section>
+				
+			<section class="frases">
+					<h2>Frases Favoritas</h2>
+					<p>
+						Não podemos resolver problemas usando o mesmo 
+						tipo de pensamento que usamos quando os criamos.
+					</p>
+					<span class="autor">- Albert Einstein / Físico Teórico</span>
+					
+					<div class="frase-content">
+						<a href="#" class="frases-item"></a>
+						<a href="#" class="frases-item"></a>
+						<a href="#" class="frases-item"></a>
+						<a href="#" class="frases-item"></a>
+					</div>
+			</section>
+				
+			<section class="contato">
+				<h2>Fale comigo</h2>
+				<h3>Vamos ser amigos!</h3>
+				
+				<div class="redes-content">
+					<div class="redes-item"><i class="fa fa-facebook-square" aria-hidden="true"></i>/RODRIGOGABRIELBR</div>
+					<div class="redes-item"><i class="fa fa-youtube-play" aria-hidden="true"></i>/RODRIGOGABRIEL</div>
+					<div class="redes-item"><i class="fa fa-envelope" aria-hidden="true"></i>/RODRIGORGRB@GMAIL.COM</div>
+				</div>
+					<span>OU PREENCHA ESTE FORMULARIO</span>
+					<div class="contato-form">
+						<input type="text" name="nome" placeholder="Seu Nome">
+						<input type="text" name="email" placeholder="Seu email">
+						<input type="text" name="mensagem" placeholder="Sua Mensagem" class="mensagem">
+						<input type="Submit" value="ENVIAR" class="enviar">
+					</div>
+			</section>
+			
+			<footer>
+				<p>2017 - Alguns Direitos reservados - Rodrigo Gabriel</p>	
+			</footer>
+    </body>
+</html>
